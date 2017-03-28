@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="shoes.css" media="screen" title="no title">
+    <title>Men's shoes</title>
+</head>
+
+<body>
+    <label for="show-menu" class="show-menu">Show Menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+            <a href="#">Men</a>
+            <ul class="hidden">
+                <li><a href="Men/Smart shoes">Smart Shoes</a></li>
+                <li><a href="Men/Casual">Casual</a></li>
+            </ul>
+        </li>
+    </ul>
+    <img class="logo" src="logo/logo.png" alt="uadivha's shoes">
+    <br><br><br><br><br><br>
+    <div class="inputs">
+        <form name="user_info" action="action_get.php" method="get">
+            <label>Color</label> : <select size="1">
+                <option value="select color">select color</option>
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Blue">Blue</option>
+                <option value="Gray">Gray</option>
+                <option value="Dark Brown">Dark Brown</option>
+            </select><br><br>
+            <label>Size</label> : <select size="1">
+                <option value="select size">select size</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+              </select><br><br>
+            <input type="button" name="" value="Search" />
+        </form>
+    </div>
+
+</body>
+
+</html>
