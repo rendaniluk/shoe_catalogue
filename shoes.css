@@ -23,6 +23,32 @@
     height: 11% auto;
     width: 100% auto;
 }
+/*.Lady {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.Lady:hover {
+opacity: 1.0;
+filter: alpha(opacity=50);
+}
+
+.Men {
+    opacity: 0.5;
+    filter: alpha(opacity=30);
+}
+.Men:hover {
+opacity: 1.0;
+filter: alpha(opacity=30);
+}
+
+.Kid{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.Kid:hover {
+opacity: 1.0;
+filter: alpha(opacity=50);
+}*/
 
 footer {
     text-align: center;
@@ -199,4 +225,13 @@ input[type=checkbox]:checked~#menu {
     width: 30%;
     border: solid;
     border-radius: 50px;
+}
+
+.about{
+text-align: center;
+list-style: none;
+margin: auto;
+font-weight: bold;
+font-family: sans-serif;
+font-style: oblique;
 }

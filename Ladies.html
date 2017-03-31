@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="shoes.css" media="screen" title="no title">
-
+    <link rel="shortcut icon" href="logo/logo.png">
+    <script src="handlebars-v4.0.5.js"></script>
     <title>Ladies shoes</title>
 </head>
 
@@ -12,7 +13,7 @@
     <label for="show-menu" class="show-menu">Show Menu</label>
     <input type="checkbox" id="show-menu" role="button">
     <ul id="menu">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Back</a></li>
         <li>
             <a href="Ladies.html">Ladies</a>
             <ul class="hidden">
@@ -26,27 +27,32 @@
     <br><br><br><br><br><br>
     <div class="inputs">
         <form name="user_info" action="action_get.php" method="get">
-            <label>Color</label> : <select size="1">
-                <option value="select color">select color</option>
-                <option value="Black">Black</option>
-                <option value="White">White</option>
-                <option value="Blue">Blue</option>
-                <option value="Green">Green</option>
-                <option value="Gray">Gray</option>
+            <label>Color</label> : <select class="options" size="1">
+                <option value="select color" disabled selected>select color</option>
                 <option value="Dark Brown">Dark Brown</option>
+                <option value="White">White</option>
+                <option value="Green">Green</option>
             </select><br><br>
-            <label>Size</label> : <select size="1">
-                <option value="select size">select size</option>
+            <label>Size</label> : <select class="sizes" size="1">
+                <option value="select size" disabled selected>select size</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
                 <option value="7">7</option>
                 <option value="8">8</option>
               </select><br><br>
-            <input type="button" name="" value="Search" />
+            <input class="search" type="button" name="" value="Search" />
         </form>
     </div>
+    <script class="template" type="text/handlebars-x">
+        {{#each shoeDetails}}
+        <li>{{this}}</li>
+        {{/each}}
+    </script>
+    <div class="shoeDetails">
 
+    </div>
 </body>
+<script src="shoes.js" type="text/javascript" charset="utf-8"></script>
 
 </html>

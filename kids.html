@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="shoes.css" media="screen" title="no title">
+    <link rel="shortcut icon" href="logo/logo.png">
+    <script src="handlebars-v4.0.5.js"></script>
+
     <title>Kids shoes</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <label for="show-menu" class="show-menu">Show Menu</label>
-  	<input type="checkbox" id="show-menu" role="button">
-  	<ul id="menu">
-  		<li><a href="index.html">Home</a></li>
-  		<li>
-        <a href="#">Kids</a>
-        <ul class="hidden">
-          <li><a href="Kids/Girls">Girls</a></li>
-          <li><a href="Kids/Boys">Boys</a></li>
-        </ul>
-      </li>
-  	</ul>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="menu">
+        <li><a href="index.html">Back</a></li>
+        <li>
+            <a href="#">Kids</a>
+            <ul class="hidden">
+                <li><a href="Kids/Girls">Girls</a></li>
+                <li><a href="Kids/Boys">Boys</a></li>
+            </ul>
+        </li>
+    </ul>
     <img class="logo" src="logo/logo.png" alt="uadivha's shoes">
-<br><br><br><br><br><br>
+    <br><br><br><br><br><br>
     <div class="inputs">
-        <form name="user_info"  method="get">
-            <label>Color</label>
-            : <select size="1">
-                <option value="select color">select color</option>
-                <option value="Black">Black</option>
-                <option value="White">White</option>
-                <option value="Blue">Blue</option>
-                <option value="Green">Green</option>
-                <option value="Gray">Gray</option>
-                <option value="Dark Brown">Dark Brown</option>
+        <form name="user_info" method="get">
+            <label>Color</label> : <select class="options" size="1">
+                <option class="color" value="select color" disabled selected>select color</option>
+                <option class="color" value="Black">Black</option>
+                <option class="color" value="White">White</option>
+                <option class="color" value="Blue">Blue</option>
             </select><br><br>
-            <label>Size</label>
-              : <select size="1">
-                <option value="select size">select size</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
+            <label>Size</label> : <select class="sizes" size="1">
+                <option class="size" value="select size" disabled selected>select size</option>
+                <option class="size" value="1">1</option>
+                <option class="size" value="2">2</option>
+                <option class="size" value="3">3</option>
+                <option class="size" value="4">4</option>
               </select><br><br>
-            <input type="button" name="" value="Search" />
+            <input class="search" type="button" name="" value="Search" />
         </form>
     </div>
+    <script class="template" type="text/handlebars-x">
+        {{#each shoeDetails}}
+        <li>{{this}}</li>
+        {{/each}}
+    </script>
+    <ul class="shoeDetails">
 
-  </body>
+    </ul>
+</body>
+<script src="build.js" type="text/javascript" charset="utf-8"></script>
+
 </html>
