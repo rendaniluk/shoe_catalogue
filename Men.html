@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="shoes.css" media="screen" title="no title">
-    <script src="handlebars-v4.0.5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
     <link rel="shortcut icon" href="logo/logo.png">
     <title>Men's shoes</title>
 </head>
@@ -31,7 +31,7 @@
                 <option value="Blue">Blue</option>
                 <option value="Gray">Gray</option>
                 <option value="Dark Brown">Dark Brown</option>
-            </select><br><br>
+            </select><br>
             <label>Size</label> : <select class="sizes" size="1">
                 <option value="select size" disabled selected>select size</option>
                 <option value="6">6</option>
@@ -39,18 +39,25 @@
                 <option value="8">8</option>
                 <option value="9">9</option>
                 <option value="10">10</option>
-              </select><br><br>
+              </select><br>
             <input class="search" type="button" name="" value="Search" />
         </form>
     </div>
     <script class="template" type="text/handlebars-x">
+
+
         {{#each shoeDetails}}
-        <li>{{this}}</li>
+<ul>
+      <li>Color:{{color}}</li>
+      <li>Size :{{size}}</li>
+      <li>Price :R {{price}}.00</li>
+      <li>Stock :{{in_stock}}</li>
+</ul>
         {{/each}}
     </script>
-    <ul class="shoeDetails">
+    <div class="shoeDetails">
 
-    </ul>
+    </div>
 </body>
 <script src="build.js" type="text/javascript" charset="utf-8"></script>
 

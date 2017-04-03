@@ -179,15 +179,13 @@ searchBtn.addEventListener('click', function() {
     var shoeList = [];
     for (var i = 0; i < kids.length; i++) {
         if (colorSelected === kids[i].color && sizeSelected == kids[i].size) {
-            var selectedList = ["Color:" + " " + kids[i].color, "Size:" + kids[
-                    i].size, "Price:" + "R" + kids[i].price, "Stock:" +
-                kids[i].in_stock
-            ];
+            var selectedList = kids[i];
             shoeList.push(selectedList);
-            var shoeInfo = myTemplate({
-                shoeDetails: shoeList
-            });
+            var shoeInfo = myTemplate({shoeDetails:shoeList});
             shoeDetails.innerHTML = shoeInfo;
         }
     }
+
+    size.value = "select size";
+    colors.value ="select color"
 });

@@ -235,3 +235,24 @@ font-weight: bold;
 font-family: sans-serif;
 font-style: oblique;
 }
+.shoeDetails{
+  width: 80%;
+}
+.shoeDetails>ul>li{
+    color:black;
+    font-weight: bold;
+    font-family: cursive;
+    display:table-column;
+    margin:0.5em auto;
+    background-color:none;
+    width: 100%;
+    align-items: center;
+   }
+
+   select{
+      -webkit-display: flex;
+     -moz-display: flex;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }

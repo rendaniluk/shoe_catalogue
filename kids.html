@@ -32,25 +32,32 @@
                 <option class="color" value="Black">Black</option>
                 <option class="color" value="White">White</option>
                 <option class="color" value="Blue">Blue</option>
-            </select><br><br>
+            </select><br>
             <label>Size</label> : <select class="sizes" size="1">
                 <option class="size" value="select size" disabled selected>select size</option>
                 <option class="size" value="1">1</option>
                 <option class="size" value="2">2</option>
                 <option class="size" value="3">3</option>
                 <option class="size" value="4">4</option>
-              </select><br><br>
+              </select><br>
             <input class="search" type="button" name="" value="Search" />
         </form>
     </div>
     <script class="template" type="text/handlebars-x">
+
+
         {{#each shoeDetails}}
-        <li>{{this}}</li>
+<ul>
+      <li>Color:{{color}}</li>
+      <li>Size :{{size}}</li>
+      <li>Price :R {{price}}.00</li>
+      <li>Stock :{{in_stock}}</li>
+</ul>
         {{/each}}
     </script>
-    <ul class="shoeDetails">
+    <div class="shoeDetails">
 
-    </ul>
+    </div>
 </body>
 <script src="build.js" type="text/javascript" charset="utf-8"></script>
 

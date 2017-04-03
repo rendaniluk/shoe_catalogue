@@ -106,15 +106,12 @@ searchBtn.addEventListener('click', function() {
     var shoeList = [];
     for (var i = 0; i < Ladies.length; i++) {
         if (colorSelected === Ladies[i].color && sizeSelected == Ladies[i].size) {
-            var selectedList = ["Color:" + " " + Ladies[i].color, "Size:" + Ladies[
-                    i].size, "Price:" + "R" + Ladies[i].price, "Stock:" +
-                Ladies[i].in_stock
-            ];
+            var selectedList =Ladies[i];
             shoeList.push(selectedList);
-            var shoeInfo = myTemplate({
-                shoeDetails: shoeList
-            });
-            shoeDetails.innerHTML = shoeInfo;
         }
     }
+    var shoeInfo = myTemplate({shoeDetails: shoeList});
+    shoeDetails.innerHTML = shoeInfo;
+    size.value = "select size";
+    colors.value ="select color";
 });
