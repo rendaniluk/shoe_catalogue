@@ -242,24 +242,22 @@ font-family: sans-serif;
 font-style: oblique;
 }
 .shoeDetails{
-  width: 80%;
-}
-.shoeDetails>ul>li{
-    color:black;
-    font-weight: bold;
-    font-family: cursive;
-    display:table-column;
-    margin:0.5em;
-    background-color:none;
-    width: 100%;
-    align-items: center;
-   }
+  font-weight: bold;
+  font-family: cursive;
+  text-align: center;
+  color: red;
+  font-size: 40px;
+  width: 85%;
 
-.shoeDetails>ul{
-margin-left:30em;
-margin-right:35em;
-padding:2em;
-background-color:gray;
+}
+
+.shoeDetails>table{
+  font-weight: normal;
+  font-size: 15px;
+  color: black;
+  margin:1em auto;
+  table-layout:auto;
+  border:black solid 0.5px;
 }
 
    select{
@@ -269,4 +267,3 @@ background-color:gray;
      align-items: center;
      justify-content: center;
    }
-

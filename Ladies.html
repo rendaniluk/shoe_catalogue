@@ -29,12 +29,14 @@
         <form name="user_info" action="action_get.php" method="get">
             <label>Color</label> : <select class="options" size="1">
                 <option value="select color" disabled selected>select color</option>
+                <option value="all">All</option>
                 <option value="Dark Brown">Dark Brown</option>
                 <option value="White">White</option>
                 <option value="Green">Green</option>
             </select><br>
             <label>Size</label> : <select class="sizes" size="1">
                 <option value="select size" disabled selected>select size</option>
+                <option value="all">All</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
@@ -45,19 +47,34 @@
         </form>
     </div>
     <script class="template" type="text/handlebars-x">
-    {{#each shoeDetails}}
-<ul>
-  <li>Color:{{color}}</li>
-  <li>Size :{{size}}</li>
-  <li>Price :R {{price}}.00</li>
-  <li>Stock :{{in_stock}}</li>
-</ul>
-    {{/each}}
+    <table class="tab" border="1px">
+        <tbody>
+          <thead>
+          <tr>
+              <th colspan="4">Stock avalailable</th>
+          </tr>
+            <tr>
+              <th>Color</th>
+              <th>Size</th>
+              <th>Price</th>
+              <th>Stock</th>
+          </tr>
+          </thead>
+          {{#each shoeDetails}}
+
+          <tr>
+  <td>{{color}}</td>
+  <td>{{size}}</td>
+  <td>R {{price}}.00</td>
+  <td>{{in_stock}}</td>
+  {{/each}}
+</tr>
+</table>
     </script>
     <div class="shoeDetails">
 
     </div>
 </body>
-<script src="shoes.js" type="text/javascript" charset="utf-8"></script>
+<script src="Ladies.js" type="text/javascript" charset="utf-8"></script>
 
 </html>
