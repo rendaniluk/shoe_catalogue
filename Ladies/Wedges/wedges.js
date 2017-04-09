@@ -1,11 +1,13 @@
-//The dom
-var colors = document.querySelector('.options');
-var size = document.querySelector('.sizes');
-var searchBtn = document.querySelector('.search');
+var darkB = document.querySelector('.darkbrown');
+var white = document.querySelector('.white');
+var gray = document.querySelector('.gray');
+var Blue = document.querySelector('.blue');
+var Green = document.querySelector('.green');
+var black = document.querySelector('.black');
 var template = document.querySelector('.template')
-var shoeDetails = document.querySelector('.shoeDetails')
-  //*****************DOM END***************************
-  //List of objects
+var shoeDetails_flats = document.querySelector('.shoeDetails_flats')
+
+
 var Ladies = [{
     color: 'Dark Brown',
     size: 4,
@@ -159,48 +161,29 @@ var Ladies = [{
   }
 
 ];
-
-
 var myTemplate = Handlebars.compile(template.innerHTML);
-searchBtn.addEventListener('click', function() {
-  var sizeSelected = size.value;
-  var colorSelected = colors.value;
+var imgValue = function(evt) {
+  var mmm = evt.target.value;
   var shoeList = [];
   for (var i = 0; i < Ladies.length; i++) {
-    var selectedList = Ladies[i];
-
-    if (colorSelected === Ladies[i].color && sizeSelected == Ladies[i].size) {
-      shoeList.push(selectedList);
+    var imgSelected = Ladies[i];
+    if (Ladies[i].color.startsWith(mmm)) {
+      shoeList.push(imgSelected);
       var shoeInfo = myTemplate({
-        shoeDetails: shoeList
+        shoeDetails_flats: shoeList
       });
-      shoeDetails.innerHTML = shoeInfo;
-    } else if (colorSelected === Ladies[i].color && sizeSelected ==
-      "select size") {
-      shoeList.push(selectedList);
-      var shoeInfo = myTemplate({
-        shoeDetails: shoeList
-      });
-      shoeDetails.innerHTML = shoeInfo;
-    } else if (colorSelected === "select color" && sizeSelected == Ladies[i]
-      .size) {
-      shoeList.push(selectedList);
-      var shoeInfo = myTemplate({
-        shoeDetails: shoeList
-      });
-      shoeDetails.innerHTML = shoeInfo;
-    } else if (colorSelected === "select color" && sizeSelected ==
-      "select size") {
-      var massage = "You must select size or color!"
-      shoeDetails.innerHTML = massage;
-    } else if (colorSelected === "all" || sizeSelected == "all") {
-      shoeList.push(Ladies[i]);
-      var shoeInfo = myTemplate({
-        shoeDetails: shoeList
-      });
-      shoeDetails.innerHTML = shoeInfo;
-    }
+      shoeDetails_flats.innerHTML = shoeInfo;
+    } // else if (Ladies[i].color.startsWith(mmm) == null) {
+    //   var massage = "No Stock Avalailable"
+    //   shoeDetails.innerHTML = massage;
+    // }
   }
-  size.value = "select size";
-  colors.value = "select color";
-});
+}
+white.addEventListener('click', imgValue);
+darkB.addEventListener('click', imgValue);
+gray.addEventListener('click', imgValue);
+Blue.addEventListener('click', imgValue);
+Green.addEventListener('click', imgValue);
+black.addEventListener('click', imgValue);
+
+

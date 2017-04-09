@@ -50,9 +50,10 @@
         <tbody>
           <thead>
           <tr>
-              <th colspan="4">Stock avalailable</th>
+              <th colspan="5">Stock avalailable</th>
           </tr>
             <tr>
+              <th>Brand</th>
               <th>Color</th>
               <th>Size</th>
               <th>Price</th>
@@ -62,6 +63,7 @@
           {{#each shoeDetails}}
 
           <tr>
+  <td>{{brand}}</td>
   <td>{{color}}</td>
   <td>{{size}}</td>
   <td>R {{price}}.00</td>
