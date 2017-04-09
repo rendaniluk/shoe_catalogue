@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../shoes.css" media="screen" title="no title">
+    <link rel="shortcut icon" href="../../logo/logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <title>Smart shoes</title>
+</head>
+
+<body>
+    <label for="show-menu" class="show-menu">Show Menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="menu">
+        <li><a href="../../Men.html">Back</a></li>
+        <li>
+            <a href="smart.html">Smart Shoes</a>
+        </li>
+    </ul>
+    <img class="logo" src="../../logo/logo.png" alt="uadivha's shoes">
+    <br><br><br><br><br><br>
+
+<div class="images">
+  <div class="flats_shoes">
+    <ul class="flats_s">
+        <img class="flats" value="darkbrown" src="darkbrown.jpg" alt=""/>
+        <input type="button" class="darkbrown" id="myImG" value="D">
+
+        <img class="flats" value="white" src="white.jpg" alt=""/>
+        <input type="button" class="white" id="myImG" value="W">
+
+        <img class="flats" value="gray" src="gray.jpg" alt=""/>
+        <input type="button" class="gray" id="myImG" value="Gra">
+
+        <!-- <img class="flats" value="blue" src="blue.jpg" alt=""/>
+        <input type="button" class="blue" id="myImG" value="Blu"> -->
+
+        <!-- <img class="flats" value="green" src="green.jpg" alt=""/>
+        <input type="button" class="green" id="myImG" value="Gre"> -->
+
+        <img class="flats" value="black" src="black.jpg" alt=""/>
+        <input type="button" class="black" id="myImG" value="Bla">
+
+    </ul>
+  </div>
+</div>
+
+    <script class="template" type="text/handlebars-x">
+    <table class="tab" border="1px">
+        <tbody>
+          <thead>
+          <tr>
+              <th colspan="4">Stock avalailable</th>
+          </tr>
+            <tr>
+              <th>Color</th>
+              <th>Size</th>
+              <th>Price</th>
+              <th>Stock</th>
+          </tr>
+          </thead>
+          {{#each shoeDetails_flats}}
+
+          <tr>
+  <td>{{color}}</td>
+  <td>{{size}}</td>
+  <td>R {{price}}.00</td>
+  <td>{{in_stock}}</td>
+  {{/each}}
+</tr>
+</table>
+    </script>
+    <div class="shoeDetails_flats">
+
+    </div>
+</body>
+<script src="smart.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
