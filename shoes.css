@@ -248,7 +248,20 @@ font-style: oblique;
   color: red;
   font-size: 40px;
   width: 85%;
+}
 
+.shoeDetails_flats{
+  margin-top:300px;
+  width: 85%;
+}
+
+.shoeDetails_flats>table{
+  font-weight: normal;
+  font-size: 15px;
+  color: black;
+  margin:1em auto;
+  table-layout:auto;
+  border:black solid 0.5px;
 }
 
 .shoeDetails>table{
@@ -267,3 +280,18 @@ font-style: oblique;
      align-items: center;
      justify-content: center;
    }
+.flats{
+  width: 150px;
+  height: 150px;
+  border: black solid;
+  margin: 1em;
+}
+
+.flats_shoes{
+  width: 98%;
+  margin-top: 50px;
+}
+
+#myImG{
+  width: 30px;
+}
