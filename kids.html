@@ -12,9 +12,13 @@
     <script class="kidsTemplate" type="text/handlebars-x">
         {{#each kids}}
         <tr>
+            <td>{{brand}}</td>
             <td>{{color}}</td>
             <td>{{size}}</td>
-            <td>{{brand}}</td>
+            <td>{{price}}</td>
+            <td>{{in_stock}}</td>
+
+
         </tr>
         {{/each}}
     </script>
@@ -68,6 +72,7 @@
   <img class="logo" src="logo/logo.png" alt="uadivha's shoes">
   <br><br><br><br><br><br>
   <div class="container">
+    <input type="button" name="" value="Add Stock" class="newStock">
 
       <div class="inputs">
           <!-- <h1>Filters</h1> -->
@@ -81,48 +86,51 @@
       <div class="">
 
       </div>
-      <!-- <div class="add">
-          <h1>Add New Stock</h1>
-          <div class="field">
-              <label for="color">Color</label>
-              <input type="text" name="color" class="productColor">
-          </div>
-          <div class="field">
-              <label for="subject">Size</label>
-              <input type="text" name="size" class="productSize">
-          </div>
-          <div class="field">
-              <label for="grade">Brand</label>
-              <input type="text" name="brand" class="productBrand">
-          </div>
-          <div class="field">
-              <label for="subject">Size</label>
-              <input type="text" name="size" class="productSize">
-          </div>
-          <div class="field">
-              <label for="grade">Brand</label>
-              <input type="text" name="brand" class="productBrand">
-          </div>
-          <div class="field">
-              <label for="addStockBtn"></label>
-              <input type="button" name="" value="Add" class="addButton">
-          </div>
-
-      </div> -->
-  </div>
     <div class="shoeDetails">
       <table>
           <thead>
               <tr>
+                  <th>Brands</th>
                   <th>Colors</th>
                   <th>Sizes</th>
-                  <th>Brands</th>
+                  <th>Price</th>
+                  <th>In stock</th>
               </tr>
           </thead>
           <tbody class="shoeDetails_flats">
           </tbody>
       </table>
     </div>
+    <div class="add">
+
+      <h1>Add New Stock</h1>
+      <div class="field">
+        <label for="brand">Brand</label>
+        <input type="text" name="brand" class="productBrand" placeholder="enter brand name">
+      </div>
+      <div class="field">
+        <label for="color">Color</label>
+        <input type="text" name="color" class="productColor" placeholder="enter color">
+      </div>
+      <div class="field">
+        <label for="size">Size</label>
+        <input type="number" min="1" max="10" name="size" class="productSize" placeholder="enter size">
+      </div>
+      <div class="field">
+        <label for="price">Price</label>
+        <input type="number" min="50" max="10000" name="price" class="productPrice" placeholder="enter price">
+      </div>
+      <div class="field">
+        <label for="stock">Stock</label>
+        <input type="number" min="1" max="100" name="stock" class="productStock" placeholder="enter stock">
+      </div>
+      <div class="field">
+        <label for="addStockBtn"></label>
+        <input type="button" name="" value="Add" class="addButton">
+      </div>
+
+    </div>
+  </div>
 </body>
 <script src="newKids.js" type="text/javascript" charset="utf-8"></script>
 

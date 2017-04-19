@@ -12,7 +12,28 @@
   var kidsTemplate = initTemplate('.kidsTemplate');
   var kidsElement = document.querySelector('.shoeDetails_flats');
 
+  var addButton = document.querySelector('.addButton');
 
+var hideShow = document.querySelector('.add')
+var hideshowBtn = document.querySelector('.newStock')
+
+  var addBrand = document.querySelector('.productBrand');
+  var addColor = document.querySelector('.productColor');
+  var addSize = document.querySelector('.productSize');
+  var addPrice = document.querySelector('.productPrice');
+  var addStock = document.querySelector('.productStock');
+
+//show the add stock inputs function.
+  function hide_Show_Div() {
+      var hideShow = document.querySelector('.add');
+      if (hideShow.style.display === 'none') {
+          hideShow.style.display = 'block';
+      } else {
+          hideShow.style.display = 'none';
+      }
+  }
+  //Event to addStock button
+hideshowBtn.addEventListener('click',hide_Show_Div);
   var kids = [{
     color: 'Blue',
     brand: 'Basic',
@@ -104,7 +125,7 @@
     price: 700,
     in_stock: 6
   }];
-
+//avoiding same value repeating on dropdown
   function uniqueColorList(dataList) {
     var colors = [];
     var colorMap = {};
@@ -118,7 +139,7 @@
     return colors;
   }
 
-
+//avoiding same value repeating on dropdown
   function uniqueSizesList(dataList) {
     var sizes = [];
     var sizeMap = {};
@@ -131,7 +152,7 @@
     }
     return sizes;
   }
-
+//avoiding same value repeating on dropdown
   function uniqueBrandList(dataList) {
     var brands = [];
     var brandMap = {};
@@ -229,6 +250,37 @@
       }
       showData(kids, kidFiltered);
     }
+
+  });
+  //adding stock button
+  addButton.addEventListener('click', function() {
+    //getting the value of input text
+    var brandValue = addBrand.value;
+    var colorValue = addColor.value;
+    var sizeValue  = addSize.value;
+    var priceValue = addPrice.value;
+    var stockValue = addStock.value;
+    //avoiding adding blanks to only add when input text value is define
+      if (brandValue !== ''
+          && colorValue !== ''
+          && sizeValue !== ''
+          && priceValue !== ''
+          && stockValue !== '') {
+          kids.push({
+                    brand:brandValue,
+                    color:colorValue,
+                    size:sizeValue,
+                    price:priceValue,
+                    in_stock:stockValue
+              });
+      }
+      //clearing input text.
+      addBrand.value = "";
+      addColor.value = "";
+      addSize.value = "";
+      addPrice.value = "";
+      addStock.value = "";
+      showData(kids);
   });
   showData(kids);
 
