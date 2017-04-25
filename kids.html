@@ -4,78 +4,134 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="shoes.css" media="screen" title="no title">
+    <!-- <link rel="stylesheet" href="style.css" media="screen" title="no title"> -->
     <link rel="shortcut icon" href="logo/logo.png">
-    <script src="handlebars-v4.0.5.js"></script>
-
+    <!-- <script src="handlebars-v4.0.5.js"></script> -->
+    <script src="handlebars.min.js" charset="utf-8"></script>
     <title>Kids shoes</title>
+    <script class="kidsTemplate" type="text/handlebars-x">
+        {{#each kids}}
+        <tr>
+            <td>{{brand}}</td>
+            <td>{{color}}</td>
+            <td>{{size}}</td>
+            <td>{{price}}</td>
+            <td>{{in_stock}}</td>
+
+
+        </tr>
+        {{/each}}
+    </script>
+    <script class="dropDownsTemplates" type="text/handlebars-x">
+    <span class="sheoCatalogue">
+        <label for="color">Colors</label>
+        <select class="colorFilter">
+        <option value="">Select color</option>
+        {{#each colors}}
+            <option>{{this}}</option>
+        {{/each}}
+        </select>
+    </span>
+
+    <span class="sheoCatalogue">
+        <label for="size">Size</label>
+        <select class="sizeFilter">
+        <option value="">Select size</option>
+        {{#each sizes}}
+            <option>{{this}}</option>
+        {{/each}}
+        </select>
+    </span>
+
+    <span class="sheoCatalogue">
+        <label for="brand">Brand</label>
+        <select class="brandFilter">
+        <option value="">Select brand</option>
+        {{#each brands}}
+            <option>{{this}}</option>
+        {{/each}}
+        </select>
+    </span>
+  <input type="button" name="filterButton" value="Filter">
+    </script>
 </head>
 
 <body>
-    <label for="show-menu" class="show-menu">Show Menu</label>
-    <input type="checkbox" id="show-menu" role="button">
-    <ul id="menu">
-        <li><a href="index.html">Back</a></li>
-        <li>
-            <a href="#">Kids</a>
-            <ul class="hidden">
-                <li><a href="Kids/Girls">Girls</a></li>
-                <li><a href="Kids/Boys">Boys</a></li>
-            </ul>
-        </li>
-    </ul>
-    <img class="logo" src="logo/logo.png" alt="uadivha's shoes">
-    <br><br><br><br><br><br>
-    <div class="inputs">
-        <form name="user_info" method="get">
-            <label>Color</label> : <select class="options" size="1">
-                <option class="color" value="select color" disabled selected>select color</option>
-                <option value="all">All</option>
-                <option class="color" value="Black">Black</option>
-                <option class="color" value="White">White</option>
-                <option class="color" value="Blue">Blue</option>
-            </select><br>
-            <label>Size</label> : <select class="sizes" size="1">
-                <option class="size" value="select size" disabled selected>select size</option>
-                <option value="all">All</option>
-                <option class="size" value="1">1</option>
-                <option class="size" value="2">2</option>
-                <option class="size" value="3">3</option>
-                <option class="size" value="4">4</option>
-              </select><br>
-            <input class="search" type="button" name="" value="Search" />
-        </form>
-    </div>
-    <script class="template" type="text/handlebars-x">
-    <table class="tab" border="1px">
-        <tbody>
-          <thead>
-          <tr>
-              <th colspan="5">Stock avalailable</th>
-          </tr>
-            <tr>
-              <th>Brand</th>
-              <th>Color</th>
-              <th>Size</th>
-              <th>Price</th>
-              <th>Stock</th>
-          </tr>
-          </thead>
-          {{#each shoeDetails}}
+  <label for="show-menu" class="show-menu">Show Menu</label>
+  <input type="checkbox" id="show-menu" role="button">
+  <ul id="menu">
+    <li><a href="index.html">Back</a></li>
+    <li>
+      <a href="#">Kids</a>
+      <ul class="hidden">
+        <li><a href="Kids/Girls/girls.html">Girls</a></li>
+        <li><a href="Kids/Boysboys.html">Boys</a></li>
+      </ul>
+    </li>
+  </ul>
+  <img class="logo" src="logo/logo.png" alt="uadivha's shoes">
+  <br><br><br><br><br><br>
+  <div class="container">
+    <input type="button" name="" value="Add Stock" class="newStock">
 
-          <tr>
-  <td>{{brand}}</td>
-  <td>{{color}}</td>
-  <td>{{size}}</td>
-  <td>R {{price}}.00</td>
-  <td>{{in_stock}}</td>
-  {{/each}}
-</tr>
-</table>
-    </script>
+      <div class="inputs">
+          <!-- <h1>Filters</h1> -->
+
+          <div class="filters">
+
+          </div>
+
+      </div>
+
+      <div class="">
+
+      </div>
     <div class="shoeDetails">
+      <table>
+          <thead>
+              <tr>
+                  <th>Brands</th>
+                  <th>Colors</th>
+                  <th>Sizes</th>
+                  <th>Price</th>
+                  <th>In stock</th>
+              </tr>
+          </thead>
+          <tbody class="shoeDetails_flats">
+          </tbody>
+      </table>
+    </div>
+    <div class="add">
+
+      <h1>Add New Stock</h1>
+      <div class="field">
+        <label for="brand">Brand</label>
+        <input type="text" name="brand" class="productBrand" placeholder="enter brand name">
+      </div>
+      <div class="field">
+        <label for="color">Color</label>
+        <input type="text" name="color" class="productColor" placeholder="enter color">
+      </div>
+      <div class="field">
+        <label for="size">Size</label>
+        <input type="number" min="1" max="10" name="size" class="productSize" placeholder="enter size">
+      </div>
+      <div class="field">
+        <label for="price">Price</label>
+        <input type="number" min="50" max="10000" name="price" class="productPrice" placeholder="enter price">
+      </div>
+      <div class="field">
+        <label for="stock">Stock</label>
+        <input type="number" min="1" max="100" name="stock" class="productStock" placeholder="enter stock">
+      </div>
+      <div class="field">
+        <label for="addStockBtn"></label>
+        <input type="button" name="" value="Add" class="addButton">
+      </div>
 
     </div>
+  </div>
 </body>
-<script src="kids.js" type="text/javascript" charset="utf-8"></script>
+<script src="newKids.js" type="text/javascript" charset="utf-8"></script>
 
 </html>

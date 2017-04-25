@@ -13,7 +13,7 @@
     <label for="show-menu" class="show-menu">Show Menu</label>
     <input type="checkbox" id="show-menu" role="button">
     <ul id="menu">
-        <li><a href="../../Ladies.html">Back</a></li>
+        <li><a href="../../Ladies.html">Ladies</a></li>
         <li>
             <a href="sandals.html">Sandals</a>
         </li>
@@ -21,55 +21,67 @@
     <img class="logo" src="../../logo/logo.png" alt="uadivha's shoes">
     <br><br><br><br><br><br>
 
-<div class="images">
-  <div class="flats_shoes">
-    <ul class="flats_s">
-        <img class="flats" value="darkbrown" src="darkbrown.jpg" alt=""/>
-        <input type="button" class="darkbrown" id="myImG" value="D">
+    <div class="images">
+        <div class="flats_shoes">
+            <ul class="flats_s">
+                <div class="darkbrown" id="myImG" value="D">
+                    <img class="flats" value="darkbrown" src="darkbrown.jpg" alt="" />
+                    <input type="radio" name="rad" class="darkbrown"  value="D">
+                </div>
+                <div class="white" id="myImG" value="W">
+                    <img class="flats" value="white" src="white.jpg" alt="" />
 
-        <img class="flats" value="white" src="white.jpg" alt=""/>
-        <input type="button" class="white" id="myImG" value="W">
+                    <input type="radio" name="rad" class="white"  value="W">
+                </div>
+                <div class="gray" id="myImG" value="Gra" type="checkbox">
+                    <img class="flats" value="gray" src="gray.jpg" alt="" />
 
-        <img class="flats" value="gray" src="gray.jpg" alt=""/>
-        <input type="button" class="gray" id="myImG" value="Gra">
+                    <input type="radio" name="rad" class="gray"  value="Gra">
+                </div>
+                <div class="blue" id="myImG" value="Blu">
+                    <img class="flats" value="blue" src="blue.jpg" alt="" />
 
-        <img class="flats" value="blue" src="blue.jpg" alt=""/>
-        <input type="button" class="blue" id="myImG" value="Blu">
+                    <input type="radio" name="rad" class="blue"  value="Blu">
+                </div>
+                <div class="green" id="myImG" value="Gre">
+                    <img class="flats" value="green" src="green.jpg" alt="" />
 
-        <img class="flats" value="green" src="green.jpg" alt=""/>
-        <input type="button" class="green" id="myImG" value="Gre">
+                    <input type="radio" name="rad" class="green"  value="Gre">
+                </div>
+                <div class="black" id="myImG" value="Bla">
+                    <img class="flats" value="black" src="black.jpg" alt="" />
 
-        <img class="flats" value="black" src="black.jpg" alt=""/>
-        <input type="button" class="black" id="myImG" value="Bla">
+                    <input type="radio" name="rad" class="black"  value="Bla">
+                </div>
 
-    </ul>
-  </div>
-</div>
+            </ul>
+        </div>
+    </div>
 
     <script class="template" type="text/handlebars-x">
-    <table class="tab" border="1px">
-        <tbody>
-          <thead>
-          <tr>
-              <th colspan="4">Stock avalailable</th>
-          </tr>
-            <tr>
-              <th>Color</th>
-              <th>Size</th>
-              <th>Price</th>
-              <th>Stock</th>
-          </tr>
-          </thead>
-          {{#each shoeDetails_flats}}
+        <table class="tab" border="1px">
+            <tbody>
+                <thead>
+                    <tr>
+                        <th colspan="4">Stock avalailable</th>
+                    </tr>
+                    <tr>
+                        <th>Color</th>
+                        <th>Size</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                {{#each shoeDetails_flats}}
 
-          <tr>
-  <td>{{color}}</td>
-  <td>{{size}}</td>
-  <td>R {{price}}.00</td>
-  <td>{{in_stock}}</td>
-  {{/each}}
-</tr>
-</table>
+                <tr>
+                    <td>{{color}}</td>
+                    <td>{{size}}</td>
+                    <td>R {{price}}.00</td>
+                    <td>{{in_stock}}</td>
+                    {{/each}}
+                </tr>
+        </table>
     </script>
     <div class="shoeDetails_flats">
 
