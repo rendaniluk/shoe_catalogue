@@ -78,3 +78,140 @@
 <script src="Ladies.js" type="text/javascript" charset="utf-8"></script>
 
 </html>
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="shoes.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+    <link rel="shortcut icon" href="logo/logo.png">
+    <script src="handlebars-v4.0.5.js"></script>
+    <script src="handlebars.min.js" charset="utf-8"></script>
+    <title>Ladies shoes</title>
+    <script class="kidsTemplate" type="text/handlebars-x">
+        {{#each Ladies}}
+        <tr>
+            <td>{{brand}}</td>
+            <td>{{color}}</td>
+            <td>{{size}}</td>
+            <td>{{price}}</td>
+            <td>{{in_stock}}</td>
+
+
+        </tr>
+        {{/each}}
+    </script>
+    <script class="dropDownsTemplates" type="text/handlebars-x">
+    <span class="sheoCatalogue">
+        <label for="color">Colors</label>
+        <select class="colorFilter">
+        <option value="">Select color</option>
+        {{#each colors}}
+            <option>{{this}}</option>
+        {{/each}}
+        </select>
+    </span>
+
+    <span class="sheoCatalogue">
+        <label for="size">Size</label>
+        <select class="sizeFilter">
+        <option value="">Select size</option>
+        {{#each sizes}}
+            <option>{{this}}</option>
+        {{/each}}
+        </select>
+    </span>
+
+    <span class="sheoCatalogue">
+        <label for="brand">Brand</label>
+        <select class="brandFilter">
+        <option value="">Select brand</option>
+        {{#each brands}}
+            <option>{{this}}</option>
+        {{/each}}
+        </select>
+    </span>
+  <input type="button" name="filterButton" value="Filter">
+    </script>
+</head>
+
+<body>
+  <label for="show-menu" class="show-menu">Show Menu</label>
+  <input type="checkbox" id="show-menu" role="button">
+  <ul id="menu">
+    <li><a href="index.html">Back</a></li>
+    <li>
+      <a href="#">Kids</a>
+      <ul class="hidden">
+        <li><a href="Kids/Girls/girls.html">Girls</a></li>
+        <li><a href="Kids/Boysboys.html">Boys</a></li>
+      </ul>
+    </li>
+  </ul>
+  <img class="logo" src="logo/logo.png" alt="uadivha's shoes">
+  <br><br><br><br><br><br>
+  <div class="container">
+    <input type="button" name="" value="Add Stock" class="newStock">
+
+      <div class="inputs">
+          <h1>Filters</h1>
+
+          <div class="filters">
+
+          </div>
+
+      </div>
+
+      <div class="">
+
+      </div>
+    <div class="shoeDetails">
+      <table>
+          <thead>
+              <tr>
+                  <th>Brands</th>
+                  <th>Colors</th>
+                  <th>Sizes</th>
+                  <th>Price</th>
+                  <th>In stock</th>
+              </tr>
+          </thead>
+          <tbody class="shoeDetails_flats">
+          </tbody>
+      </table>
+    </div>
+    <div class="add">
+
+      <h1>Add New Stock</h1>
+      <div class="field">
+        <label for="brand">Brand</label>
+        <input type="text" name="brand" class="productBrand" placeholder="enter brand name">
+      </div>
+      <div class="field">
+        <label for="color">Color</label>
+        <input type="text" name="color" class="productColor" placeholder="enter color">
+      </div>
+      <div class="field">
+        <label for="size">Size</label>
+        <input type="number" min="1" max="10" name="size" class="productSize" placeholder="enter size">
+      </div>
+      <div class="field">
+        <label for="price">Price</label>
+        <input type="number" min="50" max="10000" name="price" class="productPrice" placeholder="enter price">
+      </div>
+      <div class="field">
+        <label for="stock">Stock</label>
+        <input type="number" min="1" max="100" name="stock" class="productStock" placeholder="enter stock">
+      </div>
+      <div class="field">
+        <label for="addStockBtn"></label>
+        <input type="button" name="" value="Add" class="addButton">
+      </div>
+
+    </div>
+  </div>
+</body>
+<script src="newLadies.js" type="text/javascript" charset="utf-8"></script>
+
+</html> -->
